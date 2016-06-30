@@ -20,21 +20,21 @@ var bio = {
     "title": "Civil Affairs Operations Sergeant",
     "dates": "2012 - Present",
     "location": "Fort Bragg, NC",
-    "description": "Plan and corrdinate and execute civil affairs operations"
+    "description": "Plans and directs disaster response or crisis management activities, provide disaster preparedness training, and prepare emergency plans and procedures for natural (e.g., hurricanes, floods, earthquakes), wartime, or technological disasters or hostage situations. "
 },
 {
   "employer": "US Army",
   "title": "Recruiter",
   "dates": "2008 - 2012",
   "location": "Brooklyn, NY",
-  "description": "Process and hire and match up jobs to applicants strengths"
+  "description": " Interviews and counsel’s prospective enlistees. Discusses individual aims and goals to include security, personal aptitudes, training opportunities, job satisfaction and stability, advancement, prestige, and military life. Explains employment benefits including: medical care, dependent allowance, housing, reenlistment bonus, retirement program, military/civilian educational opportunities, travel, recreational benefits, and all similar programs."
 },
 {
   "employer": "US Army",
   "title": "Logistics Manager",
   "dates": "2002 - 2008",
   "location": "Aberdeen, MD",
-  "description": "Manage issue and maintain orginizational property"
+  "description": "Knowledge of supply principles, concepts, and methodologies including the use of automated supply systems and databases. Responsible for local management of decentralized and decontrolled items which requires technical intervention to assure effective supply support and economy."
 }
 ]
 }
@@ -72,13 +72,13 @@ var bio = {
         "name": "Portfolio",
         "dates": "2016",
         "description": "Portfolio Project",
-        "url": "https://github.com/j8298c"
+        "url": "images/portfolio.png"
       },
       {
-        "name": "2nd Project",
+        "name": "Animal card",
         "dates": "2016",
         "description": "animal card",
-        "url": "https://github.com/j8298c"
+        "url": "images/animalcard.png"
         }
     ]
   }
