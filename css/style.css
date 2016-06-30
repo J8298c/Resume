@@ -167,6 +167,9 @@ img {
 span {
   padding: 5px;
 }
+.projectimg {
+  max-resolution: 50%;
+}
 
 #lets-connect {
   text-align: center;
