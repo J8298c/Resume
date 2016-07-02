@@ -10,7 +10,7 @@ var bio = {
     "welcomeMessage": "Do What Makes You Happy!",
     "skills": ["HTML5", " CSS ", " JavaScript ", " Bootstrap ", " Responsive Web Design ", " Project Management "],
     "bioPic": "images/fry.jpg"
-}
+};
 
 var work = {
     "jobs": [{
@@ -32,7 +32,7 @@ var work = {
         "location": "Aberdeen, MD",
         "description": "Knowledge of supply principles, concepts, and methodologies including the use of automated supply systems and databases. Responsible for local management of decentralized and decontrolled items which requires technical intervention to assure effective supply support and economy."
     }]
-}
+};
 var education = {
     "schools": [{
         "name": "Jamestown Community College",
@@ -55,7 +55,7 @@ var education = {
         "date": "2016",
         "url": "https://udacity.com"
     }]
-}
+};
 var projects = {
     "projects": [{
         "name": "Portfolio",
@@ -63,9 +63,10 @@ var projects = {
         "description": "Portfolio Project",
         "url": "images/portfolio.png"
     }]
-}
+};
 
 bio.display = function() {
+    "use strict";
     var formattedName = HTMLheaderName.replace("%data%", bio.name);
     var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
     var formattedBioPic = HTMLbioPic.replace("%data%", bio.bioPic);
@@ -97,6 +98,7 @@ bio.display = function() {
 bio.display();
 
 work.display = function() {
+    "use strict";
     if (work.jobs.length > 0) {
         $("#workExperience").append(HTMLworkStart);
         for (i in work.jobs) {
@@ -117,6 +119,7 @@ work.display = function() {
 work.display();
 
 projects.display = function() {
+    "use strict";
     if (projects.projects.length > 0) {
         $("#projects").append(HTMLprojectStart);
         for (i in projects.projects) {
@@ -134,6 +137,7 @@ projects.display = function() {
 projects.display();
 
 education.display = function() {
+    "use strict";
     if (education.schools.length > 0) {
         $("#education").append(HTMLschoolStart);
         for (i in education.schools) {
