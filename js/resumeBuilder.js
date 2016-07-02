@@ -62,11 +62,6 @@ var projects = {
         "dates": "2016",
         "description": "Portfolio Project",
         "url": "images/portfolio.png"
-    }, {
-        "name": "Animal card",
-        "dates": "2016",
-        "description": "animal card",
-        "url": "images/animalcard.png"
     }]
 }
 
@@ -89,6 +84,10 @@ bio.display = function() {
     $("#topContacts").append(formattedEmail);
     $("#topContacts").append(formattedGitHub);
     $("#topContacts").append(formattedLocation);
+    $("#footerContacts").append(formattedMobile);
+    $("#footerContacts").append(formattedEmail);
+    $("#footerContacts").append(formattedGitHub);
+    $("#footerContacts").append(formattedLocation);
 
     if (bio.skills.length > 0) {
         $("#header").append(HTMLskillsStart);
@@ -166,5 +165,6 @@ education.display = function() {
     }
 };
 education.display();
+
 
 $("#mapDiv").append(googleMap);
