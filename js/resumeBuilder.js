@@ -1,3 +1,4 @@
+/* Bio display function*/
 var bio = {
     "name": "Julio Mojica",
     "role": "Webdeveloper",
@@ -7,74 +8,9 @@ var bio = {
         "github": "j8298c",
         "location": "New York, NY"
     },
-    "welcomeMessage": "Hard working loyal indiviudal looking for an" + "entry position as a Front End Web Developer",
+    "welcomeMessage": "Hard working adaptable indiviudal looking for an" + " entry position as a Front End Web Developer",
     "skills": ["HTML5", " CSS ", " JavaScript ", " Bootstrap ", " Responsive Web Design ", " Project Management "],
     "biopic": "images/fry.jpg"
-};
-
-var work = {
-    "jobs": [{
-        "employer": "US Army",
-        "title": "Civil Affairs Operations Sergeant",
-        "dates": "2012 - Present",
-        "location": "Fort Bragg, NC",
-        "description": "Plans and directs disaster response or crisis" +
-        "management activities, provide disaster preparedness training," +
-        "and prepare emergency plans and procedures for natural" +
-        "(e.g., hurricanes, floods, earthquakes), wartime, or technological disasters or hostage situations. "
-    }, {
-        "employer": "US Army",
-        "title": "Recruiter",
-        "dates": "2008 - 2012",
-        "location": "Brooklyn, NY",
-        "description": " Interviews and counsel’s prospective enlistees." +
-        "Discusses individual aims and goals to include security, personal" +
-        "aptitudes, training opportunities, job satisfaction and stability," +
-        "advancement, prestige, and military life. Explains employment benefits" +
-        "including: medical care, dependent allowance, housing, reenlistment bonus," +
-        "retirement program, military/civilian educational opportunities, travel," +
-        "recreational benefits, and all similar programs."
-    }, {
-        "employer": "US Army",
-        "title": "Logistics Manager",
-        "dates": "2002 - 2008",
-        "location": "Aberdeen, MD",
-        "description": "Knowledge of supply principles, concepts, and methodologies" +
-        "including the use of automated supply systems and databases. Responsible for" +
-        "local management of decentralized and decontrolled items which requires technical" +
-        "intervention to assure effective supply support and economy."
-    }]
-};
-var education = {
-    "schools": [{
-        "name": "Jamestown Community College",
-        "location": "Jamestown, NY",
-        "degree": "Associate",
-        "majors": ["Information Technology"],
-        "dates": "2015 - Present",
-        "url": "https://sunyjcc.edu"
-    }, {
-        "name": "Fayettville Technical Communinty College",
-        "location": "Fayettville",
-        "degree": "Associates",
-        "majors": ["General Education"],
-        "dates": "2013-2015",
-        "url": "https://faytechcc.edu"
-    }],
-    "onlineCourses": [{
-        "title": "Front End Web Development",
-        "school": "Udacity",
-        "dates": "2016",
-        "url": "https://udacity.com"
-    }]
-};
-var projects = {
-    "projects": [{
-        "title": "Portfolio",
-        "dates": "2016",
-        "description": "Portfolio Project",
-        "images": ["images/portfolio.png"]
-    }]
 };
 
 bio.display = function() {
@@ -103,13 +39,48 @@ bio.display = function() {
 
     if (bio.skills.length > 0) {
         $("#header").append(HTMLskillsStart);
-        bio.skills.forEach(function (skill) {
+        bio.skills.forEach(function(skill) {
             var formattedSkill = HTMLskills.replace("%data%", skill);
             $("#skills").append(formattedSkill);
         });
     }
 };
 bio.display();
+
+/* Work display functons */
+var work = {
+    "jobs": [{
+        "employer": "US Army",
+        "title": "Civil Affairs Operations Sergeant",
+        "dates": "2012 - Present",
+        "location": "Fort Bragg, NC",
+        "description": "Plans and directs disaster response or crisis" +
+            "management activities, provide disaster preparedness training," +
+            "and prepare emergency plans and procedures for natural" +
+            "(e.g., hurricanes, floods, earthquakes), wartime, or technological disasters or hostage situations. "
+    }, {
+        "employer": "US Army",
+        "title": "Recruiter",
+        "dates": "2008 - 2012",
+        "location": "Brooklyn, NY",
+        "description": " Interviews and counsel’s prospective enlistees." +
+            "Discusses individual aims and goals to include security, personal" +
+            "aptitudes, training opportunities, job satisfaction and stability," +
+            "advancement, prestige, and military life. Explains employment benefits" +
+            "including: medical care, dependent allowance, housing, reenlistment bonus," +
+            "retirement program, military/civilian educational opportunities, travel," +
+            "recreational benefits, and all similar programs."
+    }, {
+        "employer": "US Army",
+        "title": "Logistics Manager",
+        "dates": "2002 - 2008",
+        "location": "Aberdeen, MD",
+        "description": "Knowledge of supply principles, concepts, and methodologies" +
+            "including the use of automated supply systems and databases. Responsible for" +
+            "local management of decentralized and decontrolled items which requires technical" +
+            "intervention to assure effective supply support and economy."
+    }]
+};
 
 work.display = function() {
     if (work.jobs.length > 0) {
@@ -131,24 +102,63 @@ work.display = function() {
 };
 work.display();
 
+/* Projects display function */
+
+var projects = {
+    "projects": [{
+        "title": "Portfolio",
+        "dates": "2016",
+        "description": "Portfolio Project",
+        "images": ["images/portfolio.png"]
+    }]
+};
+
 projects.display = function() {
     if (projects.projects.length > 0) {
         $("#projects").append(HTMLprojectStart);
-        for(i = 0; i < projects.projects.length; i++) {
+        for (i = 0; i < projects.projects.length; i++) {
             var formattedProjectName = HTMLprojectTitle.replace("%data%", projects.projects[i].title);
             var formattedProjectDates = HTMLprojectDates.replace("%data%", projects.projects[i].dates);
             var formattedProjectDescript = HTMLprojectDescription.replace("%data%", projects.projects[i].description);
-            var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.projects[i].images);
+            var formattedProjectImage = //HTMLprojectImage.replace("%data%", projects.projects[i].images);
             $(".project-entry").append(formattedProjectName);
             $(".project-entry").append(formattedProjectDates);
             $(".project-entry").append(formattedProjectDescript);
-            $(".project-entry").append(formattedProjectImage);
-
-
+            //$(".project-entry").append(formattedProjectImage);
+            for (image in projects.projects.images) {
+                var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.projects.images[image]);
+                $(".projectimg").append(formattedProjectImage);
+            }
         }
     }
 };
 projects.display();
+
+/*Education display function*/
+
+var education = {
+    "schools": [{
+        "name": "Jamestown Community College",
+        "location": "Jamestown, NY",
+        "degree": "Associate",
+        "majors": ["Information Technology"],
+        "dates": "2015 - Present",
+        "url": "https://sunyjcc.edu"
+    }, {
+        "name": "Fayettville Technical Communinty College",
+        "location": "Fayettville, NC",
+        "degree": "Associates",
+        "majors": ["General Education"],
+        "dates": "2013-2015",
+        "url": "https://faytechcc.edu"
+    }],
+    "onlineCourses": [{
+        "title": "Front End Web Development",
+        "school": "Udacity",
+        "dates": "2016",
+        "url": "https://udacity.com"
+    }]
+};
 
 education.display = function() {
     if (education.schools.length > 0) {
@@ -183,5 +193,5 @@ education.display = function() {
 };
 education.display();
 
-
+/* Displays Map on resume*/
 $("#mapDiv").append(googleMap);
