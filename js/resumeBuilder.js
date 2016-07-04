@@ -120,10 +120,16 @@ projects.display = function() {
             var formattedProjectName = HTMLprojectTitle.replace("%data%", projects.projects[i].title);
             var formattedProjectDates = HTMLprojectDates.replace("%data%", projects.projects[i].dates);
             var formattedProjectDescript = HTMLprojectDescription.replace("%data%", projects.projects[i].description);
-            var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.projects[i].images);
+            //var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.projects[i].images);
             $(".project-entry").append(formattedProjectName);
             $(".project-entry").append(formattedProjectDates);
             $(".project-entry").append(formattedProjectDescript);
+            //$(".project-entry").append(formattedProjectImage);
+        }
+    }
+    if (projects.projects.length > 0) {
+        for (var j = 0; j < projects.projects.length; j++) {
+            var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.projects[j].images);
             $(".project-entry").append(formattedProjectImage);
         }
     }
