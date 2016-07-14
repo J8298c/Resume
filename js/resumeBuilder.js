@@ -96,10 +96,10 @@ work.display();
 
 var projects = {
     "projects": [{
-        "title": "Portfolio",
-        "dates": "2016",
-        "description": "Portfolio Project",
-        "images": ["images/portfolio.png"]
+      "title": "Startup Landing Page",
+      "dates": "2016",
+      "description": "Landing page using bootstrap and css fully responsive",
+      "images": ["images/landingpage.png"]
     }]
 };
 
