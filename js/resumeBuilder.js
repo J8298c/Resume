@@ -8,7 +8,7 @@ var bio = {
         "github": "j8298c",
         "location": "New York, NY"
     },
-    "welcomeMessage": "Hard working adaptable indiviudal looking for an" + " entry position as a Front End Web Developer",
+    "welcomeMessage": "Transitioning US Army Soldier looking for an" + " entry position as a Front End Web Developer",
     "skills": ["HTML5", " CSS ", " JavaScript ", " Bootstrap ", " Responsive Web Design ", " Project Management "],
     "biopic": "images/fry.jpg"
 };
@@ -100,6 +100,21 @@ var projects = {
       "dates": "2016",
       "description": "Landing page using bootstrap and css fully responsive",
       "images": ["images/landingpage.png"]
+    }, {
+      "title": "Classic Arcade Game",
+      "dates": "2016",
+      "description": "Frogger Game Clone built with HTML5 Canvas and OOJ",
+      "images": ["images/arcadegame.png"]
+    }, {
+      "title": "RGB Colorpicker",
+      "dates": "2016",
+      "description": "Users pick which color is displayed in the RGB header",
+      "images": "images/rgb.png"
+    }, {
+      "title": "Todo List",
+      "dates": "2016",
+      "description": "Todo web app built with JS and CSS Animation",
+      "images": "images/todo.png"
     }]
 };
 
@@ -110,11 +125,8 @@ projects.display = function() {
             var formattedProjectName = HTMLprojectTitle.replace("%data%", projects.projects[i].title);
             var formattedProjectDates = HTMLprojectDates.replace("%data%", projects.projects[i].dates);
             var formattedProjectDescript = HTMLprojectDescription.replace("%data%", projects.projects[i].description);
-            $(".project-entry").append(formattedProjectName, formattedProjectDates, formattedProjectDescript);
-            projects.projects.forEach(function(images) {
-                var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.projects[i].images);
-                $(".project-entry").append(formattedProjectImage);
-            })
+            var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.projects[i].images);
+            $(".project-entry").append(formattedProjectName, formattedProjectDates, formattedProjectDescript, formattedProjectImage);
         }
     }
 };
