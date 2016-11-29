@@ -93,7 +93,7 @@ work.display = function() {
 work.display();
 
 /* Projects display function */
-
+//need to update projects with more current ones 
 var projects = {
     "projects": [{
       "title": "Startup Landing Page",
@@ -125,6 +125,7 @@ projects.display = function() {
             var formattedProjectName = HTMLprojectTitle.replace("%data%", projects.projects[i].title);
             var formattedProjectDates = HTMLprojectDates.replace("%data%", projects.projects[i].dates);
             var formattedProjectDescript = HTMLprojectDescription.replace("%data%", projects.projects[i].description);
+            //need foreach loop to cycle through project pictures
             var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.projects[i].images);
             $(".project-entry").append(formattedProjectName, formattedProjectDates, formattedProjectDescript, formattedProjectImage);
         }
